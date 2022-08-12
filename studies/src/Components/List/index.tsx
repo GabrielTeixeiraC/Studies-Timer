@@ -1,4 +1,5 @@
 import React from "react";
+import './style.scss';
 
 function List() {
     const tasks = [
@@ -7,11 +8,11 @@ function List() {
         {task: "Learn Angular", time: "02:00:00"},
     ]
     return (
-        <aside>
+        <aside className="taskList">
             <h2>Today's Studies</h2>
             <ul>
                 {tasks.map((item, index) => (
-                    <li key={index}>
+                    <li key={index} className='item'>
                         <h3>
                             {item.task} 
                         </h3>
